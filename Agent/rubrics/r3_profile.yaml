@@ -1,0 +1,39 @@
+schema_version: "r3-profile-0.1"
+rubric_id: "R3"
+name: "Data and Experimental Design"
+version: "0.1.0"
+source_standard: "../standards/failure_mechanisms_v0.1.jsonl"
+shared_policy:
+  require_exact_mmd_evidence_for_confirmation: true
+  search_counterevidence: true
+  distinguish_reporting_gap: true
+  allow_abstention: true
+  allow_not_applicable: true
+  machine_may_verify_missingness: false
+  severity_model: false
+mechanisms:
+  - mechanism_id: "FM-R3-01"
+    display_alias: "R3-1"
+    name: "Test-set leakage"
+    skill_id: "data-leakage-audit"
+    rule_ids: ["DL-001", "DL-002", "DL-003", "DL-004"]
+  - mechanism_id: "FM-R3-02"
+    display_alias: "R3-2"
+    name: "Sampling or split bias"
+    skill_id: "sampling-split-audit"
+    rule_ids: ["SS-001", "SS-002", "SS-003", "SS-004"]
+  - mechanism_id: "FM-R3-03"
+    display_alias: "R3-3"
+    name: "Unfair baseline comparison"
+    skill_id: "baseline-fairness-audit"
+    rule_ids: ["BF-001", "BF-002", "BF-003", "BF-004"]
+  - mechanism_id: "FM-R3-04"
+    display_alias: "R3-4"
+    name: "Metric misalignment"
+    skill_id: "metric-alignment-audit"
+    rule_ids: ["MA-001", "MA-002", "MA-003", "MA-004"]
+  - mechanism_id: "FM-R3-05"
+    display_alias: "R3-5"
+    name: "Missing necessary controls or ablations"
+    skill_id: "control-ablation-audit"
+    rule_ids: ["CA-001", "CA-002", "CA-003", "CA-004"]

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://weakness-reviewer.local/schemas/evidence.schema.json",
+  "title": "Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evidence_id", "paper_sha256", "quote", "start_line", "end_line", "char_start", "char_end", "role"],
+  "properties": {
+    "evidence_id": {"type": "string", "minLength": 1},
+    "paper_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "quote": {"type": "string", "minLength": 1},
+    "start_line": {"type": "integer", "minimum": 1},
+    "end_line": {"type": "integer", "minimum": 1},
+    "char_start": {"type": "integer", "minimum": 0},
+    "char_end": {"type": "integer", "minimum": 1},
+    "role": {"enum": ["supporting", "counterevidence"]}
+  }
+}

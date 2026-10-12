@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://weakness-reviewer.local/schemas/skill_invocation_event.schema.json",
+  "title": "SkillInvocationEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "sequence", "timestamp", "review_run_id", "trace_id", "span_id", "parent_span_id", "event_type", "paper_id", "paper_sha256", "skill_id", "skill_version", "mechanism_id", "trigger_source", "artifact_hashes", "model", "attempt", "tokens", "latency_ms", "status", "error_code", "assessment_ids", "details"],
+  "properties": {
+    "schema_version": {"const": "skill-event-0.1"},
+    "event_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 1},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "review_run_id": {"type": "string"},
+    "trace_id": {"type": "string"},
+    "span_id": {"type": "string"},
+    "parent_span_id": {"type": ["string", "null"]},
+    "event_type": {"enum": ["review_started", "skill_considered", "skill_invoked", "resource_loaded", "model_request_started", "model_request_completed", "model_request_failed", "skill_completed", "skill_skipped", "assessment_emitted", "assessment_verified", "assessment_rejected", "review_completed", "review_failed"]},
+    "paper_id": {"type": "string"},
+    "paper_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "skill_id": {"type": ["string", "null"]},
+    "skill_version": {"type": ["string", "null"]},
+    "mechanism_id": {"type": ["string", "null"]},
+    "trigger_source": {"enum": ["orchestrator_fixed", "router_selected", "user_explicit", "system"]},
+    "artifact_hashes": {"type": "object", "additionalProperties": {"type": "string"}},
+    "model": {"type": ["string", "null"]},
+    "attempt": {"type": ["integer", "null"], "minimum": 0},
+    "tokens": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input", "output", "total", "cached"],
+      "properties": {
+        "input": {"type": ["integer", "null"]},
+        "output": {"type": ["integer", "null"]},
+        "total": {"type": ["integer", "null"]},
+        "cached": {"type": ["integer", "null"]}
+      }
+    },
+    "latency_ms": {"type": ["number", "null"], "minimum": 0},
+    "status": {"type": "string"},
+    "error_code": {"type": ["string", "null"]},
+    "assessment_ids": {"type": "array", "items": {"type": "string"}},
+    "details": {"type": "object"}
+  }
+}

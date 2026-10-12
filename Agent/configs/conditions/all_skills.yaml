@@ -1,0 +1,5 @@
+condition: "all_skills"
+description: "All five skill protocols loaded together. Reserved for later controlled comparison."
+skill_loading: "all"
+execution_mode: "single_pass"
+experiment_ready: false

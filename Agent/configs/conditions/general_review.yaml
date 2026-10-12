@@ -1,0 +1,5 @@
+condition: "general_review"
+description: "Generic manuscript review control without R3 method references. Reserved for later experiments."
+skill_loading: "none"
+execution_mode: "single_pass"
+experiment_ready: false

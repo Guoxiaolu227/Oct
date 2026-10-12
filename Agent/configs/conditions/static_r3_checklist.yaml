@@ -1,0 +1,5 @@
+condition: "static_r3_checklist"
+description: "R3 mechanism names and shared guardrails without detailed skill references."
+skill_loading: "registry_only"
+execution_mode: "single_pass"
+experiment_ready: false

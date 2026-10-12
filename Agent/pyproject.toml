@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "r3-paper-audit-agent"
+version = "0.1.0"
+description = "Source-traceable R3 data and experimental-design audit agent"
+requires-python = ">=3.11"
+dependencies = [
+  "jsonschema>=4.23",
+  "openai>=2.0",
+  "pydantic>=2.10",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+r3-agent = "r3_agent.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

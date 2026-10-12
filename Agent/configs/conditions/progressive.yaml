@@ -1,0 +1,5 @@
+condition: "progressive"
+description: "Run all five mechanisms separately and load only the active skill and its decision rules."
+skill_loading: "active_only"
+execution_mode: "per_skill"
+experiment_ready: true

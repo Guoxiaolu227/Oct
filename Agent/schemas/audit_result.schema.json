@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://weakness-reviewer.local/schemas/audit_result.schema.json",
+  "title": "AuditResult",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "review_run_id", "paper_id", "paper_sha256", "condition", "rubric_version", "started_at", "completed_at", "artifact_hashes", "assessments", "run_status", "run_stats"],
+  "properties": {
+    "schema_version": {"const": "audit-result-0.1"},
+    "review_run_id": {"type": "string", "minLength": 1},
+    "paper_id": {"type": "string", "minLength": 1},
+    "paper_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "condition": {"type": "string"},
+    "rubric_version": {"type": "string"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "artifact_hashes": {"type": "object", "additionalProperties": {"type": "string"}},
+    "assessments": {"type": "array", "items": {"$ref": "mechanism_assessment.schema.json"}},
+    "run_status": {"enum": ["completed", "incomplete", "failed"]},
+    "run_stats": {"type": "object"}
+  }
+}

@@ -1,0 +1,27 @@
+schema_version: "agent-config-0.1"
+provider:
+  name: "deepseek"
+  base_url: "https://api.deepseek.com"
+  model: "deepseek-chat"
+  api_key_env: "DEEPSEEK_API_KEY"
+  temperature: 0
+  max_output_tokens: 4096
+  max_retries: 2
+input:
+  allowed_extensions: [".mmd"]
+  max_characters: 160000
+execution:
+  condition: "progressive"
+  output_language: "en"
+  invoke_all_mechanisms: true
+  verifier_enabled: true
+  retry_backoff_seconds: 1.0
+paths:
+  rubric: "rubrics/r3_profile.yaml"
+  system_prompt: "prompts/system.md"
+  orchestrator_prompt: "prompts/orchestrator.md"
+  verifier_prompt: "prompts/verifier.md"
+  skills: "skills"
+  private_runs: "runs/private"
+  source_registry: "provenance/source_registry.yaml"
+  traceability_edges: "provenance/traceability_edges.jsonl"
