@@ -1,0 +1,71 @@
+schema_version: "r3-pilot-protocol-0.1"
+experiment_id: "r3-progressive-smoke-2026-10-12"
+status: "frozen_before_api_execution"
+preregistered_at_utc: "2026-10-12T12:37:52.1458856Z"
+purpose: >-
+  Validate the real DeepSeek API engineering loop, output usability, request
+  and token observability, deterministic evidence checks, and trace
+  reconstruction on three naturalistic MMD papers.
+inference_boundary: >-
+  This is an engineering and qualitative pilot. It does not estimate
+  precision, recall, or evidence that Skills outperform a baseline.
+
+frozen_agent:
+  git_commit: "5c362ef0690b0c00bb77fbfdeceaa7a4d25687d0"
+  artifact_root_digest: "9565bb4137400f51edda91fc11858ed4b44abf4380695212f5ff6e942ef5503f"
+  config_path: "Agent/configs/default.yaml"
+  config_sha256: "1bfc815e25747d00b654736f8aeec269ab3739c0dbfe4bcb44d813c0c9fbbffe"
+  condition: "progressive"
+  provider: "deepseek"
+  model: "deepseek-chat"
+  output_language: "en"
+  verifier_enabled: true
+  max_model_requests_per_run: 15
+  max_input_characters: 160000
+
+inputs:
+  selection_method: "short, median, and longest eligible paper by normalized character count"
+  execution_order:
+    - paper_id: "2CxkRDMIG4"
+      relative_path: "../sea_selected/assets/test/2CxkRDMIG4/2CxkRDMIG4.mmd"
+      normalized_characters: 36387
+      sha256: "fcba2ed64fccf7669d54fd2901ba48cffe0f98ce89adedc8a1d4d74e36c8f885"
+    - paper_id: "UyNXMqnN3c"
+      relative_path: "../sea_selected/assets/test/UyNXMqnN3c/UyNXMqnN3c.mmd"
+      normalized_characters: 54502
+      sha256: "e629443bafc74d2546ebca475927890ae1a2e2fed6f72609c83b3a1772ce8151"
+    - paper_id: "I1quoTXZzc"
+      relative_path: "../sea_selected/assets/test/I1quoTXZzc/I1quoTXZzc.mmd"
+      normalized_characters: 83780
+      sha256: "d48ab978e3c01b1b6909074f6751fd4a9675ade6666473cba6ccd4d00b3c94be"
+
+execution_policy:
+  mode: "sequential_guarded"
+  virtual_environment: "Agent/.venv"
+  api_key_source: "../API/APIkey.txt"
+  api_key_handling: "temporary process environment only; never persisted or logged"
+  validate_after_each_run: true
+  summarize_after_each_run: true
+  export_sanitized_telemetry_after_each_run: true
+
+stop_gates:
+  - "unrecovered authentication, billing, rate-limit, network, or provider failure"
+  - "run status is not completed"
+  - "AuditResult or event schema validation fails"
+  - "a sixteenth model request would be required"
+  - "event sequence or trace/span relationships cannot be reconstructed"
+  - "any of the five Skills lacks considered, invoked, or terminal events"
+  - "a completed model request lacks positive token usage"
+  - "current or projected next-paper input tokens exceed 300000"
+  - "sanitized telemetry contains prompt, content, quote, or manuscript fields"
+non_stopping_observations:
+  - "assessment rejection"
+  - "verifier downgrade"
+  - "a transient request failure that succeeds within the frozen retry policy"
+
+privacy_and_outputs:
+  private_run_root: "Agent/runs/private"
+  private_artifacts: ["manuscript", "complete prompts", "raw model responses", "quotes", "AuditResult"]
+  tracked_directory: "pilot/r3_smoke_2026-10-12"
+  tracked_artifacts: ["protocol.yaml", "summary.json", "sanitized_events.jsonl", "report.md", "run_manifest.json"]
+  tracked_content_must_exclude: ["manuscript text", "verbatim quotes", "full prompts", "raw model responses", "API key"]
