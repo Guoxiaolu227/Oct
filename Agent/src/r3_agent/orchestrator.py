@@ -9,7 +9,7 @@ from typing import Any
 import yaml
 
 from .config import AgentConfig
-from .errors import ProviderError, ResponseError
+from .errors import ProviderError, RequestBudgetExceededError, ResponseError
 from .hashing import sha256_file
 from .manuscript import Manuscript
 from .models import AuditResult, MechanismAssessment, TokenUsage, Verification
@@ -112,6 +112,14 @@ def _request_with_trace(
 ) -> ModelResponse:
     last_error: Exception | None = None
     for attempt in range(config.provider.max_retries + 1):
+        requests_started = sum(
+            event.event_type == "model_request_started" for event in recorder.events
+        )
+        if requests_started >= config.execution.max_model_requests_per_run:
+            raise RequestBudgetExceededError(
+                "request_budget_exceeded: refusing to exceed "
+                f"{config.execution.max_model_requests_per_run} model requests"
+            )
         request_id = new_id("request")
         recorder.write_private_json(
             "requests",
@@ -334,6 +342,8 @@ def run_review(
                     phase="skill",
                 )
                 skill_assessments = _parse_assessments(response, skill, manuscript)
+            except RequestBudgetExceededError:
+                raise
             except Exception as exc:
                 skill_assessments = [empty_assessment(skill.mechanism_id, str(exc))]
 
@@ -370,6 +380,8 @@ def run_review(
                             phase="verifier",
                         )
                         assessment = apply_model_verdict(assessment, parse_json_object(verifier_response.content))
+                    except RequestBudgetExceededError:
+                        raise
                     except Exception as exc:
                         payload = assessment.model_dump()
                         payload["verification"] = Verification(
@@ -428,7 +440,7 @@ def run_review(
             parent_span_id=None,
             trigger_source="system",
             status="error",
-            error_code=exc.__class__.__name__,
+            error_code=getattr(exc, "error_code", exc.__class__.__name__),
             details={},
         )
         recorder.write_summary()

@@ -33,6 +33,7 @@ class ExecutionConfig(_Model):
     invoke_all_mechanisms: bool
     verifier_enabled: bool
     retry_backoff_seconds: float = Field(ge=0, le=60)
+    max_model_requests_per_run: int = Field(gt=0)
 
 
 class PathConfig(_Model):

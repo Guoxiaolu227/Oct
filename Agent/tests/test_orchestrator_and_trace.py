@@ -9,7 +9,7 @@ import pytest
 import r3_agent.orchestrator as orchestrator_module
 from r3_agent.cli import main
 from r3_agent.config import load_config
-from r3_agent.errors import ProviderError
+from r3_agent.errors import ProviderError, RequestBudgetExceededError
 from r3_agent.models import TokenUsage
 from r3_agent.orchestrator import _deduplicate, run_review
 from r3_agent.provider import ModelResponse
@@ -222,4 +222,26 @@ def test_unexpected_interruption_is_recorded_as_incomplete(
     events = load_events(run_dirs[0] / "events.jsonl")
     assert events[-1].event_type == "review_failed"
     summary = json.loads((run_dirs[0] / "trace_summary.json").read_text(encoding="utf-8"))
+    assert summary["run_status"] == "incomplete"
+
+
+def test_request_budget_stops_before_an_extra_model_call(tmp_path: Path) -> None:
+    manuscript = tmp_path / "synthetic.mmd"
+    manuscript.write_text("# Note\nNo empirical claims are made.", encoding="utf-8")
+    config = load_config(ROOT / "configs" / "default.yaml")
+    config.paths.private_runs = str(tmp_path / "runs")
+    config.execution.max_model_requests_per_run = 1
+    provider = FakeProvider()
+
+    with pytest.raises(RequestBudgetExceededError, match="request_budget_exceeded"):
+        run_review(manuscript_path=manuscript, config=config, provider=provider)
+
+    run_dir = next((tmp_path / "runs").iterdir())
+    events = load_events(run_dir / "events.jsonl")
+    started = [event for event in events if event.event_type == "model_request_started"]
+    assert provider.calls == 1
+    assert len(started) == 1
+    assert events[-1].event_type == "review_failed"
+    assert events[-1].error_code == "request_budget_exceeded"
+    summary = json.loads((run_dir / "trace_summary.json").read_text(encoding="utf-8"))
     assert summary["run_status"] == "incomplete"

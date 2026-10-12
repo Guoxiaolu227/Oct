@@ -10,6 +10,8 @@ The current release intentionally does not implement an Evidence Detector,
 PDF parsing, code inspection, external search, severity scoring, or a
 naturalistic-paper effectiveness experiment. The full MMD is supplied to the
 model. Inputs that exceed the configured character budget fail explicitly.
+Reviews also stop before exceeding `execution.max_model_requests_per_run`;
+the default hard limit is 15 requests, including retries and verifier calls.
 
 ## Setup
 

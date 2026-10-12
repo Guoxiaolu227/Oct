@@ -16,6 +16,7 @@ execution:
   invoke_all_mechanisms: true
   verifier_enabled: true
   retry_backoff_seconds: 1.0
+  max_model_requests_per_run: 15
 paths:
   rubric: "rubrics/r3_profile.yaml"
   system_prompt: "prompts/system.md"

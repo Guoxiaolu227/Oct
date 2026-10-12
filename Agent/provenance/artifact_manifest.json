@@ -1,21 +1,21 @@
 {
   "schema_version": "artifact-manifest-0.1",
-  "generated_at_utc": "2026-10-12T11:37:54.566262+00:00",
+  "generated_at_utc": "2026-10-12T12:36:00.049537+00:00",
   "hash_algorithm": "sha256",
   "artifact_count": 69,
-  "root_digest": "c2403b933c64470e680c8eac92636ee111ef2ac3735d9a8b737747f1f26163bb",
+  "root_digest": "9565bb4137400f51edda91fc11858ed4b44abf4380695212f5ff6e942ef5503f",
   "artifacts": [
     {
       "path": "CHANGELOG.md",
       "category": "package",
-      "sha256": "7208873f64f658a89401a7f1f578996119933936ddec23ac4e053fc6e295b87f",
-      "bytes": 631
+      "sha256": "b73f6fef523396fd2076ee777f99589d4322c14f13e027e123e80b6b043761d9",
+      "bytes": 707
     },
     {
       "path": "README.md",
       "category": "package",
-      "sha256": "87db0b41c44ac0fb615bb685007e81c0ee9ef439bba9706d2d0a5757d6f087bd",
-      "bytes": 2122
+      "sha256": "91ab1b2b3e5e315ab8a3dae02753fe52ae4928af92ee03b7bc7b8809f116ef91",
+      "bytes": 2274
     },
     {
       "path": "configs/conditions/all_skills.yaml",
@@ -44,8 +44,8 @@
     {
       "path": "configs/default.yaml",
       "category": "configs",
-      "sha256": "f38541aa3c7144dd21b31a7f8ccd9e3505e779c7719dcef9b85eab9ee5a5d30b",
-      "bytes": 764
+      "sha256": "1bfc815e25747d00b654736f8aeec269ab3739c0dbfe4bcb44d813c0c9fbbffe",
+      "bytes": 797
     },
     {
       "path": "docs/evidence_detector_spec.md",
@@ -314,14 +314,14 @@
     {
       "path": "src/r3_agent/config.py",
       "category": "src",
-      "sha256": "f6d3a2f2bf04b14398a545a7c96d93b43bc2914befc32a82937cc6a0d54d3776",
-      "bytes": 1864
+      "sha256": "32c1c554c0922ea4f261ce4c5d7f38cc8f8fd7167c795a63edd2f644df84bea5",
+      "bytes": 1914
     },
     {
       "path": "src/r3_agent/errors.py",
       "category": "src",
-      "sha256": "094934918504f81bf7af2cdcdb86c239470271d0dda59ac1b1ad773ba8e16c4f",
-      "bytes": 571
+      "sha256": "64d2657a6fa8935e52539a341bcb18907200bc5704e28f6cb1dc092665d37db8",
+      "bytes": 740
     },
     {
       "path": "src/r3_agent/hashing.py",
@@ -344,8 +344,8 @@
     {
       "path": "src/r3_agent/orchestrator.py",
       "category": "src",
-      "sha256": "e9531765b4eaf18588b22780d22d156dce568445f20b580dc61281ae8d0a5df7",
-      "bytes": 16837
+      "sha256": "f25a3b71688d03a219ad8b487ad79c0db2a3dc5c4d59043a52ddc830c3cf007e",
+      "bytes": 17453
     },
     {
       "path": "src/r3_agent/provider.py",
@@ -404,8 +404,8 @@
     {
       "path": "tests/test_orchestrator_and_trace.py",
       "category": "tests",
-      "sha256": "c5f85e0c38029c605cae078bda555fddab5223d68308422a7c61026e3acd5140",
-      "bytes": 8710
+      "sha256": "770d4073eaa54c6d14f495f1bc8267bb3efc16c43504bf04795ec3dc9a77ea00",
+      "bytes": 9816
     },
     {
       "path": "tests/test_provider.py",
