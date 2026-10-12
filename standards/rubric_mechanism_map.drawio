@@ -1,0 +1,138 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="weakness-standard-v01" name="Rubric Mechanism Map">
+    <mxGraphModel dx="2340" dy="1557" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="root" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;fontStyle=1;" value="Weakness Review Standard v0.1" vertex="1">
+          <mxGeometry height="50" width="300" x="610" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;" value="R1 研究问题与贡献" vertex="1">
+          <mxGeometry height="45" width="250" x="30" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;" value="R2 方法与假设有效性" vertex="1">
+          <mxGeometry height="45" width="250" x="350" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;" value="R3 数据与实验设计" vertex="1">
+          <mxGeometry height="45" width="250" x="670" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;" value="R4 结果分析与结论" vertex="1">
+          <mxGeometry height="45" width="250" x="990" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;" value="R5 透明度、复现与边界" vertex="1">
+          <mxGeometry height="45" width="250" x="1310" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r1a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R1-1 问题未定义" vertex="1">
+          <mxGeometry height="38" width="250" x="30" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="r1b" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R1-2 贡献与方法不一致" vertex="1">
+          <mxGeometry height="38" width="250" x="30" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R1-3 创新性比较不足" vertex="1">
+          <mxGeometry height="38" width="250" x="30" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="r1d" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R1-4 重要性被夸大" vertex="1">
+          <mxGeometry height="38" width="250" x="30" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="r1e" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R1-5 比较范围不足" vertex="1">
+          <mxGeometry height="38" width="250" x="30" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="r2a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R2-1 隐含关键假设" vertex="1">
+          <mxGeometry height="38" width="250" x="350" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="r2b" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R2-2 假设被违反" vertex="1">
+          <mxGeometry height="38" width="250" x="350" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R2-3 方法与问题不匹配" vertex="1">
+          <mxGeometry height="38" width="250" x="350" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="r2d" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R2-4 描述相互矛盾" vertex="1">
+          <mxGeometry height="38" width="250" x="350" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="r2e" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R2-5 理论证明缺口" vertex="1">
+          <mxGeometry height="38" width="250" x="350" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="r3a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R3-1 测试集泄漏" vertex="1">
+          <mxGeometry height="38" width="250" x="670" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="r3b" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R3-2 采样或划分偏差" vertex="1">
+          <mxGeometry height="38" width="250" x="670" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R3-3 基线不公平" vertex="1">
+          <mxGeometry height="38" width="250" x="670" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="r3d" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R3-4 指标不匹配" vertex="1">
+          <mxGeometry height="38" width="250" x="670" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="r3e" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R3-5 缺少控制实验" vertex="1">
+          <mxGeometry height="38" width="250" x="670" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="r4a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R4-1 忽略不确定性" vertex="1">
+          <mxGeometry height="38" width="250" x="990" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="r4b" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R4-2 结论超出证据" vertex="1">
+          <mxGeometry height="38" width="250" x="990" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="r4c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R4-3 相关当因果" vertex="1">
+          <mxGeometry height="38" width="250" x="990" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="r4d" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R4-4 选择性报告" vertex="1">
+          <mxGeometry height="38" width="250" x="990" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="r4e" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R4-5 局部结果泛化" vertex="1">
+          <mxGeometry height="38" width="250" x="990" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="r5a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R5-1 数据来源不透明" vertex="1">
+          <mxGeometry height="38" width="250" x="1310" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="r5b" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R5-2 预处理缺失" vertex="1">
+          <mxGeometry height="38" width="250" x="1310" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="r5c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R5-3 实现或超参数缺失" vertex="1">
+          <mxGeometry height="38" width="250" x="1310" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="r5d" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R5-4 随机性与设置缺失" vertex="1">
+          <mxGeometry height="38" width="250" x="1310" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="r5e" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#6b7280;" value="R5-5 适用边界缺失" vertex="1">
+          <mxGeometry height="38" width="250" x="1310" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="e-root-r1" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r1" />
+        <mxCell id="e-root-r2" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r2" />
+        <mxCell id="e-root-r3" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r3" />
+        <mxCell id="e-root-r4" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r4" />
+        <mxCell id="e-root-r5" edge="1" parent="1" source="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r5" />
+        <mxCell id="e-r1-a" edge="1" parent="1" source="r1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r1a" />
+        <mxCell id="e-r1-b" edge="1" parent="1" source="r1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r1b" />
+        <mxCell id="e-r1-c" edge="1" parent="1" source="r1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r1c" />
+        <mxCell id="e-r1-d" edge="1" parent="1" source="r1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r1d" />
+        <mxCell id="e-r1-e" edge="1" parent="1" source="r1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r1e" />
+        <mxCell id="e-r2-a" edge="1" parent="1" source="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r2a" />
+        <mxCell id="e-r2-b" edge="1" parent="1" source="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r2b" />
+        <mxCell id="e-r2-c" edge="1" parent="1" source="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r2c" />
+        <mxCell id="e-r2-d" edge="1" parent="1" source="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r2d" />
+        <mxCell id="e-r2-e" edge="1" parent="1" source="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r2e" />
+        <mxCell id="e-r3-a" edge="1" parent="1" source="r3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r3a" />
+        <mxCell id="e-r3-b" edge="1" parent="1" source="r3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r3b" />
+        <mxCell id="e-r3-c" edge="1" parent="1" source="r3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r3c" />
+        <mxCell id="e-r3-d" edge="1" parent="1" source="r3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r3d" />
+        <mxCell id="e-r3-e" edge="1" parent="1" source="r3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r3e" />
+        <mxCell id="e-r4-a" edge="1" parent="1" source="r4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r4a" />
+        <mxCell id="e-r4-b" edge="1" parent="1" source="r4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r4b" />
+        <mxCell id="e-r4-c" edge="1" parent="1" source="r4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r4c" />
+        <mxCell id="e-r4-d" edge="1" parent="1" source="r4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r4d" />
+        <mxCell id="e-r4-e" edge="1" parent="1" source="r4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r4e" />
+        <mxCell id="e-r5-a" edge="1" parent="1" source="r5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r5a" />
+        <mxCell id="e-r5-b" edge="1" parent="1" source="r5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r5b" />
+        <mxCell id="e-r5-c" edge="1" parent="1" source="r5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r5c" />
+        <mxCell id="e-r5-d" edge="1" parent="1" source="r5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r5d" />
+        <mxCell id="e-r5-e" edge="1" parent="1" source="r5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="r5e" />
+        <mxCell id="cross-r3a-r4b" edge="1" parent="1" source="r3a" style="dashed=1;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;" target="r4b" value="also affects" />
+        <mxCell id="cross-r3b-r4e" edge="1" parent="1" source="r3b" style="dashed=1;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;" target="r4e" value="also affects" />
+        <mxCell id="cross-r3c-r1e" edge="1" parent="1" source="r3c" style="dashed=1;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;" target="r1e" value="also affects" />
+        <mxCell id="cross-r5c-r3a" edge="1" parent="1" source="r5c" style="dashed=1;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;" target="r3a" value="can affect" />
+        <mxCell id="cross-r5d-r4a" edge="1" parent="1" source="r5d" style="dashed=1;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;" target="r4a" value="can affect" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

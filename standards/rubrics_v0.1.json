@@ -1,0 +1,86 @@
+{
+  "schema_version": "rubrics-0.1",
+  "purpose": "First-pass scientific weakness discovery for empirical AI/ML/NLP papers",
+  "selection_rule": "Keep the five top-level dimensions stable; select mechanisms under them dynamically by paper type and claim.",
+  "rubrics": [
+    {
+      "rubric_id": "R1",
+      "name": "研究问题与贡献",
+      "definition": "检查研究问题、主要主张、贡献、重要性和创新性是否清楚且有依据。",
+      "diagnostic_questions": [
+        "论文要解决的问题是否被清楚、可检验地定义？",
+        "声称的贡献是否与实际方法和实验一致？",
+        "创新性是否与最相关工作进行了充分比较？",
+        "论文是否给出了问题重要性的充分理由？"
+      ],
+      "included_topics": ["problem_formulation", "contribution_claim", "novelty", "significance", "comparison_scope"],
+      "excluded_topics": ["算法推导本身的正确性归入 R2", "实验结果能否支持结论归入 R4", "实现细节缺失归入 R5"],
+      "applicable_paper_types": ["empirical_ml", "nlp", "systems", "theory"],
+      "source_ids": ["SRC-G01", "SRC-G02", "SRC-G03", "SRC-G04", "SRC-M01"]
+    },
+    {
+      "rubric_id": "R2",
+      "name": "方法与假设有效性",
+      "definition": "检查方法、算法、理论推导及其关键假设是否足以解决论文提出的问题。",
+      "diagnostic_questions": [
+        "方法是否依赖未说明或未论证的关键假设？",
+        "这些假设在当前任务、数据和环境中是否成立？",
+        "方法是否与声称解决的问题相匹配？",
+        "公式、算法描述和实际流程是否一致？",
+        "理论结论是否有完整、可检查的论证？"
+      ],
+      "included_topics": ["assumption", "algorithm_correctness", "method_task_alignment", "theoretical_gap", "internal_consistency"],
+      "excluded_topics": ["数据和基线设计归入 R3", "结论过度推广归入 R4", "复现信息缺失归入 R5"],
+      "applicable_paper_types": ["empirical_ml", "nlp", "systems", "theory"],
+      "source_ids": ["SRC-G01", "SRC-G02", "SRC-G04", "SRC-M01"]
+    },
+    {
+      "rubric_id": "R3",
+      "name": "数据与实验设计",
+      "definition": "检查数据、划分、基线、指标和控制实验是否能够公平、无偏地检验论文主张。",
+      "diagnostic_questions": [
+        "训练、调参和测试之间是否相互独立？",
+        "数据采样和划分是否引入了偏差？",
+        "基线和比较条件是否公平、充分？",
+        "评价指标是否对应论文目标？",
+        "是否有足够的控制实验排除其他解释？"
+      ],
+      "included_topics": ["data_leakage", "sampling_bias", "baseline_fairness", "metric_alignment", "controls_and_ablations"],
+      "excluded_topics": ["从结果推出结论的错误归入 R4", "数据来源说明缺失归入 R5，除非它直接造成实验偏差"],
+      "applicable_paper_types": ["empirical_ml", "nlp", "systems", "experimental_science"],
+      "source_ids": ["SRC-G02", "SRC-G04", "SRC-M02", "SRC-M04", "SRC-M05", "SRC-M06", "SRC-M07"]
+    },
+    {
+      "rubric_id": "R4",
+      "name": "结果分析与结论",
+      "definition": "检查结果、统计分析、解释和结论是否保持在实验实际支持的范围内。",
+      "diagnostic_questions": [
+        "结果是否报告了足够的不确定性和稳定性？",
+        "结论是否超出了数据和实验能够支持的范围？",
+        "是否把相关关系解释成因果关系？",
+        "是否选择性报告有利结果？",
+        "单一数据集或局部结果是否被过度推广？"
+      ],
+      "included_topics": ["uncertainty", "overclaim", "causal_interpretation", "selective_reporting", "generalization"],
+      "excluded_topics": ["实验方案本身的设计问题归入 R3", "方法推导错误归入 R2", "表达和复现细节归入 R5"],
+      "applicable_paper_types": ["empirical_ml", "nlp", "systems", "experimental_science"],
+      "source_ids": ["SRC-G01", "SRC-G02", "SRC-G03", "SRC-G04", "SRC-M01", "SRC-M02", "SRC-M04", "SRC-M05", "SRC-M06", "SRC-M08"]
+    },
+    {
+      "rubric_id": "R5",
+      "name": "透明度、可复现性与适用边界",
+      "definition": "检查第三方是否能够核验或复现关键结果，以及论文是否说明方法的限制和适用范围。",
+      "diagnostic_questions": [
+        "数据来源、预处理和过滤是否被说明？",
+        "关键实现、超参数和训练设置是否足够完整？",
+        "是否报告随机性、运行次数和计算环境？",
+        "论文是否说明方法的失败边界和限制？",
+        "第三方能否根据论文重建核心实验？"
+      ],
+      "included_topics": ["data_provenance", "preprocessing_transparency", "implementation_details", "reproducibility", "limitations_and_scope"],
+      "excluded_topics": ["如果缺少细节直接造成实验偏差，可同时标注 R3；否则保持 R5", "单纯语言质量问题不作为核心 weakness"],
+      "applicable_paper_types": ["empirical_ml", "nlp", "systems", "experimental_science"],
+      "source_ids": ["SRC-G02", "SRC-G03", "SRC-M03", "SRC-M04", "SRC-M07", "SRC-M08"]
+    }
+  ]
+}
