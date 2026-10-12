@@ -1,0 +1,6 @@
+interface:
+  display_name: "Metric Alignment Audit"
+  short_description: "Match evaluation measures to the paper's target claim"
+  default_prompt: "Use $metric-alignment-audit to test whether this paper's metrics support its claimed capability."
+policy:
+  allow_implicit_invocation: true

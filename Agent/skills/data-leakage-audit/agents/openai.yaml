@@ -1,0 +1,6 @@
+interface:
+  display_name: "Data Leakage Audit"
+  short_description: "Trace evaluation information through an ML pipeline"
+  default_prompt: "Use $data-leakage-audit to check this manuscript for evidence-backed evaluation leakage."
+policy:
+  allow_implicit_invocation: true

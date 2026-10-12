@@ -1,0 +1,6 @@
+interface:
+  display_name: "Baseline Fairness Audit"
+  short_description: "Audit claim-relevant comparison and tuning conditions"
+  default_prompt: "Use $baseline-fairness-audit to evaluate whether this manuscript's comparisons are fair."
+policy:
+  allow_implicit_invocation: true

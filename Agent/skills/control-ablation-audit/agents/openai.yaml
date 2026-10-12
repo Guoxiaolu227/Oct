@@ -1,0 +1,6 @@
+interface:
+  display_name: "Control and Ablation Audit"
+  short_description: "Test attribution claims against alternative explanations"
+  default_prompt: "Use $control-ablation-audit to identify only controls necessary for this paper's stated claims."
+policy:
+  allow_implicit_invocation: true
