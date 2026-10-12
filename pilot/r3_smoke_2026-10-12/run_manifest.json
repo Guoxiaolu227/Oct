@@ -1,0 +1,34 @@
+{
+  "schema_version": "r3-pilot-run-manifest-0.1",
+  "experiment_id": "r3-progressive-smoke-2026-10-12",
+  "generated_at_utc": "2026-10-12T12:52:49.699679+00:00",
+  "agent_commit": "5c362ef0690b0c00bb77fbfdeceaa7a4d25687d0",
+  "protocol_commit": "7bb0361",
+  "artifacts": [
+    {
+      "path": "protocol.yaml",
+      "sha256": "dc85f886c25ce37f2e6f46d0ae26e682fca24d7e99173bb78920fcd91f556f1c",
+      "bytes": 3331
+    },
+    {
+      "path": "summary.json",
+      "sha256": "ea4adf39c0e844835424d17c302feca7d9cfc9e6e42f3f8435eed2acc4c08a4c",
+      "bytes": 4821
+    },
+    {
+      "path": "sanitized_events.jsonl",
+      "sha256": "67b585f7725f7bae664266e263f7e64cfe41176529a2841f0515e9b75f777fc5",
+      "bytes": 355459
+    },
+    {
+      "path": "report.md",
+      "sha256": "79bac1d488652abfbc019f772c745cd6f5288996fd883e5fe5d74c585b3a6dc6",
+      "bytes": 4776
+    }
+  ],
+  "private_run_map": {
+    "2CxkRDMIG4": "review_5239227b1c414249b1ad4a6530528435",
+    "UyNXMqnN3c": "review_77059fea08e942ebab4de1cb26ebea60",
+    "I1quoTXZzc": "review_bbfea2b9358548f7bd947571768bc7c7"
+  }
+}

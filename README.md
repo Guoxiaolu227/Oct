@@ -7,7 +7,7 @@ weaknesses in empirical ML papers.
 - `standards/` contains the pre-existing rubric and mechanism baseline.
 - `Agent/` contains the source-traceable R3 prompt, skills, runner, telemetry,
   controlled probes, and tests.
-- `pilot/` is reserved for later naturalistic evaluation. No paper-level
-  effectiveness claim is made by the current engineering validation.
+- `pilot/` contains preregistered naturalistic engineering pilots and their
+  sanitized results. These pilots do not make paper-level effectiveness claims.
 
 See `Agent/README.md` for setup and usage.
