@@ -7,5 +7,6 @@
 - Added MMD-only audit runner, deterministic quote verification, and finding
   verification.
 - Added append-only per-skill invocation telemetry and sanitized exports.
+- Added a reproducible SHA-256 artifact manifest and sanitized telemetry example.
 - Added controlled probes and deterministic test coverage.
 - Documented the future Evidence Detector without implementing it.

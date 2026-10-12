@@ -29,13 +29,15 @@ python -m r3_agent validate result.json
 python -m r3_agent summarize-trace runs/private/<review_run_id>
 python -m r3_agent export-telemetry runs/private/<review_run_id> --output telemetry.jsonl
 python -m r3_agent verify-sources
+python -m r3_agent build-manifest
 python -m pytest
 ```
 
 Private manuscripts, complete prompts, and raw model responses are written
 under `runs/private/` and ignored by Git. Exported telemetry excludes those
 fields and retains artifact hashes, invocation events, token use, latency,
-status, and assessment identifiers.
+status, and assessment identifiers. A schema-valid sanitized example is in
+`examples/sanitized_telemetry.jsonl`.
 
 ## Research Boundary
 

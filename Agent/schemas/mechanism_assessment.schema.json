@@ -7,7 +7,7 @@
   "required": ["assessment_id", "mechanism_ids", "status", "claim_under_review", "hypothesis", "causal_chain", "supporting_evidence", "counterevidence", "missing_information", "missingness_status", "resolution_needed", "severity", "verification"],
   "properties": {
     "assessment_id": {"type": "string", "minLength": 1},
-    "mechanism_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"pattern": "^FM-R3-0[1-5]$"}},
+    "mechanism_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^FM-R3-0[1-5]$"}},
     "status": {"enum": ["confirmed_flaw", "plausible_risk", "reporting_gap", "refuted", "not_applicable", "insufficient_evidence"]},
     "claim_under_review": {"type": "string"},
     "hypothesis": {"type": "string"},
