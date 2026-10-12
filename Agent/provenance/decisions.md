@@ -15,6 +15,13 @@ leakage when information crosses the evaluation boundary and split bias when
 the split unit fails to match the claimed deployment population. Shared text
 alone does not justify duplicate labels.
 
+The runner merges cross-Skill findings only when status, normalized claim,
+hypothesis, causal chain, supporting/counterevidence IDs, and missing-information
+needs are identical. This deliberately conservative rule collapses duplicate
+reports while preserving findings with distinct failure chains. `refuted`,
+`not_applicable`, and `insufficient_evidence` assessments remain
+mechanism-specific.
+
 ## Evidence and Missingness
 
 `confirmed_flaw` requires an exact quote from the supplied MMD plus a valid
