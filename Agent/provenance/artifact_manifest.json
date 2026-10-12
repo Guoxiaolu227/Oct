@@ -1,21 +1,21 @@
 {
   "schema_version": "artifact-manifest-0.1",
-  "generated_at_utc": "2026-10-12T09:12:06.267341+00:00",
+  "generated_at_utc": "2026-10-12T11:37:54.566262+00:00",
   "hash_algorithm": "sha256",
   "artifact_count": 69,
-  "root_digest": "1aa69bf0e7a557ad0c33bb316b693c848506aae93b61d4377087ca6ca42f072b",
+  "root_digest": "c2403b933c64470e680c8eac92636ee111ef2ac3735d9a8b737747f1f26163bb",
   "artifacts": [
     {
       "path": "CHANGELOG.md",
       "category": "package",
-      "sha256": "6d887dc95add64f302bab6402adf92f2153fc3c8baf8a59d10b3b088ca573247",
-      "bytes": 551
+      "sha256": "7208873f64f658a89401a7f1f578996119933936ddec23ac4e053fc6e295b87f",
+      "bytes": 631
     },
     {
       "path": "README.md",
       "category": "package",
-      "sha256": "e12601216aab2f6d35ba13e60c00ba07ca1a5cc2ace9c7fc67c3ee4c790d5d6f",
-      "bytes": 1893
+      "sha256": "87db0b41c44ac0fb615bb685007e81c0ee9ef439bba9706d2d0a5757d6f087bd",
+      "bytes": 2122
     },
     {
       "path": "configs/conditions/all_skills.yaml",

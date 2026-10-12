@@ -15,11 +15,16 @@ model. Inputs that exceed the configured character budget fail explicitly.
 
 ```powershell
 cd D:\NJUST\WeaknessReviewer\Oct\Agent
-python -m pip install -e .
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -e ".[test]"
 $env:DEEPSEEK_API_KEY = "<secret>"
 ```
 
-The key is read only from the environment and is never written to telemetry.
+All development and review commands below are intended to run from this
+project-local virtual environment. `.venv/` is ignored by Git. The key is read
+only from the environment and is never written to telemetry.
 
 ## Commands
 

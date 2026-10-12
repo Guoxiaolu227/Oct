@@ -8,5 +8,6 @@
   verification.
 - Added append-only per-skill invocation telemetry and sanitized exports.
 - Added a reproducible SHA-256 artifact manifest and sanitized telemetry example.
+- Documented and validated a project-local Python virtual-environment workflow.
 - Added controlled probes and deterministic test coverage.
 - Documented the future Evidence Detector without implementing it.
