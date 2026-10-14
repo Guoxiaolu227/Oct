@@ -1,0 +1,98 @@
+schema_version: "r3-model-replication-protocol-0.1"
+experiment_id: "r3-progressive-gpt56-luna-2026-10-14"
+status: "frozen_before_api_execution"
+preregistered_at_utc: "2026-10-14T14:57:17.2686826Z"
+purpose: >-
+  Replicate the three-paper progressive R3 pilot with gpt-5.6-luna while
+  holding manuscripts, prompts, Skills, rubric, verifier, schemas, and
+  execution limits fixed. Compare model behavior, evidence validity, status
+  calibration, trace completeness, and cost with the prior DeepSeek pilot.
+inference_boundary: >-
+  This is a development-set model replication and qualitative comparison. It
+  does not estimate precision or recall, establish superiority over DeepSeek,
+  or provide an unbiased generalization result.
+
+frozen_agent:
+  git_commit: "ca81772f234f71d1bf04afb7c3283a7ddeecbeac"
+  artifact_root_digest: "e939d5dc32a8b18a0476c093dda18e8a4522b6f1b24d75bc690d3ee691eb826e"
+  config_path: "Agent/configs/gpt56_luna.yaml"
+  config_sha256: "c4a8f53a29b11c5db862d9a1a7d3558ac8a478195adbb165b243c94dc5ce9fb5"
+  system_prompt_sha256: "a41267c7ae43348b17001e781cd97c3e1ea676e28ba40a9baa25f7016eed7ba7"
+  orchestrator_prompt_sha256: "88142d86180367e08166f0028478ccf85dc11507210258b96ac09ada27d6d876"
+  verifier_prompt_sha256: "943f2e521fbf58cdd41eb786f2b9b5ff4242ee0fa529bfe04c06c9d83f96beea"
+  condition: "progressive"
+  provider: "openai-compatible"
+  endpoint_host: "sub.wenhengpuyuan.com"
+  model: "gpt-5.6-luna"
+  output_language: "en"
+  verifier_enabled: true
+  max_model_requests_per_run: 15
+  max_input_characters: 160000
+  max_output_tokens_per_request: 4096
+  temperature: 0
+
+inputs:
+  selection_method: "exact reuse of the three DeepSeek development-pilot manuscripts"
+  execution_order:
+    - paper_id: "2CxkRDMIG4"
+      relative_path: "../sea_selected/assets/test/2CxkRDMIG4/2CxkRDMIG4.mmd"
+      normalized_characters: 36387
+      sha256: "fcba2ed64fccf7669d54fd2901ba48cffe0f98ce89adedc8a1d4d74e36c8f885"
+    - paper_id: "UyNXMqnN3c"
+      relative_path: "../sea_selected/assets/test/UyNXMqnN3c/UyNXMqnN3c.mmd"
+      normalized_characters: 54502
+      sha256: "e629443bafc74d2546ebca475927890ae1a2e2fed6f72609c83b3a1772ce8151"
+    - paper_id: "I1quoTXZzc"
+      relative_path: "../sea_selected/assets/test/I1quoTXZzc/I1quoTXZzc.mmd"
+      normalized_characters: 83780
+      sha256: "d48ab978e3c01b1b6909074f6751fd4a9675ade6666473cba6ccd4d00b3c94be"
+
+execution_policy:
+  mode: "sequential_guarded"
+  virtual_environment: "Agent/.venv"
+  api_key_source: "../API/OpenAIKey.txt"
+  api_key_handling: >-
+    Extract into OPENAI_API_KEY only inside one PowerShell process; never
+    persist or log the secret; remove the variable in finally.
+  validate_after_each_run: true
+  summarize_after_each_run: true
+  export_sanitized_telemetry_after_each_run: true
+  compatibility_probe:
+    formal_run: false
+    total_tokens: 42
+    result: "gpt-5.6-luna returned valid JSON and positive token usage"
+
+stop_gates:
+  - "unrecovered authentication, billing, rate-limit, network, or provider failure"
+  - "run status is not completed"
+  - "AuditResult or event schema validation fails"
+  - "a sixteenth model request would be required"
+  - "event sequence or trace/span relationships cannot be reconstructed"
+  - "any of the five Skills lacks considered, invoked, or terminal events"
+  - "a completed model request lacks positive token usage"
+  - "current or projected next-paper input tokens exceed 300000"
+  - "sanitized telemetry contains prompt, content, quote, or manuscript fields"
+non_stopping_observations:
+  - "assessment rejection"
+  - "verifier downgrade"
+  - "a transient request failure that succeeds within the frozen retry policy"
+
+comparison_baseline:
+  experiment_id: "r3-progressive-smoke-2026-10-12"
+  model: "deepseek-chat"
+  agent_commit: "5c362ef0690b0c00bb77fbfdeceaa7a4d25687d0"
+  summary_path: "pilot/r3_smoke_2026-10-12/summary.json"
+  raw_runs_are_read_only: true
+
+privacy_and_outputs:
+  private_run_root: "Agent/runs/private"
+  private_artifacts: ["manuscript", "complete prompts", "raw model responses", "quotes", "AuditResult"]
+  tracked_directory: "pilot/r3_smoke_gpt56_luna_2026-10-14"
+  tracked_artifacts:
+    - "protocol.yaml"
+    - "summary.json"
+    - "sanitized_events.jsonl"
+    - "report.md"
+    - "assessment_human_alignment_report.md"
+    - "run_manifest.json"
+  tracked_content_must_exclude: ["manuscript text", "verbatim quotes", "full prompts", "raw model responses", "API key"]
