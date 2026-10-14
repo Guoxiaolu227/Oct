@@ -1,0 +1,44 @@
+{
+  "schema_version": "r3-model-replication-run-manifest-0.1",
+  "experiment_id": "r3-progressive-gpt56-luna-2026-10-14",
+  "generated_at_utc": "2026-10-14T15:38:22.2194396Z",
+  "execution_status": "guarded_early_stop",
+  "agent_commit": "ca81772f234f71d1bf04afb7c3283a7ddeecbeac",
+  "protocol_commit": "d74cb04",
+  "artifacts": [
+    {
+      "path": "protocol.yaml",
+      "sha256": "e888028cfb71aa8d2c793902c9e6b946448ab13e0431941652031c3cd0c40649",
+      "bytes": 4435
+    },
+    {
+      "path": "summary.json",
+      "sha256": "fd6c465702aceb1974d391e1697f5873052ad5406349088bd4092bbfd500e1f4",
+      "bytes": 5729
+    },
+    {
+      "path": "sanitized_events.jsonl",
+      "sha256": "d06014c15963e41a3965788d096914919adba041e35dbe6ab6225dd52193f441",
+      "bytes": 234405
+    },
+    {
+      "path": "report.md",
+      "sha256": "2cbd2546eb8631282394e287a6b58169ad11ba6d78c2c37b10dc1fe4e3ebba1a",
+      "bytes": 9928
+    },
+    {
+      "path": "assessment_human_alignment_report.md",
+      "sha256": "79298b9cb260b1c81cf2ff91fd762d37851f64d4dff58fb4d836ae3623cf4b81",
+      "bytes": 7761
+    }
+  ],
+  "private_run_map": {
+    "2CxkRDMIG4": "review_52d738262490430d9743d16941b0026e",
+    "UyNXMqnN3c": "review_a89f69e439d045c0bd3cded90fb7bebc",
+    "I1quoTXZzc": null
+  },
+  "not_started": {
+    "paper_id": "I1quoTXZzc",
+    "reason": "Projected input tokens were 300265, exceeding the preregistered 300000-token gate before any paid request was sent."
+  }
+}

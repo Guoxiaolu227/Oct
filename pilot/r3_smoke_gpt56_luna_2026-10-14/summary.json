@@ -1,0 +1,198 @@
+{
+  "schema_version": "r3-model-replication-summary-0.1",
+  "experiment_id": "r3-progressive-gpt56-luna-2026-10-14",
+  "generated_at_utc": "2026-10-14T15:27:53.1481984Z",
+  "protocol_status": "executed_without_protocol_changes",
+  "execution_status": "guarded_early_stop",
+  "agent_commit": "ca81772f234f71d1bf04afb7c3283a7ddeecbeac",
+  "protocol_commit": "d74cb04",
+  "model": "gpt-5.6-luna",
+  "stop": {
+    "paper_not_started": "I1quoTXZzc",
+    "gate": "projected_next_paper_input_tokens",
+    "limit": 300000,
+    "observed_projection": 300265,
+    "projection_basis": {
+      "paper_id": "UyNXMqnN3c",
+      "observed_input_tokens": 195333,
+      "normalized_characters": 54502,
+      "next_paper_characters": 83780
+    },
+    "note": "Stopped before the third paid review as preregistered; no replacement or threshold change."
+  },
+  "aggregate": {
+    "papers_planned": 3,
+    "papers_completed": 2,
+    "papers_not_started": 1,
+    "events": 138,
+    "requests_started": 21,
+    "requests_completed": 21,
+    "request_failures": 0,
+    "input_tokens": 309517,
+    "output_tokens": 23094,
+    "total_tokens": 332611,
+    "model_latency_ms": 925092.185,
+    "assessments": 11,
+    "deterministic_invalid_assessments": 10,
+    "candidate_findings_before_verifier": 10,
+    "initial_statuses": {
+      "reporting_gap": 8,
+      "plausible_risk": 2,
+      "not_applicable": 1
+    },
+    "final_statuses": {
+      "reporting_gap": 8,
+      "plausible_risk": 2,
+      "not_applicable": 1
+    },
+    "verifier_verdicts": {
+      "accept": 11
+    }
+  },
+  "runs": [
+    {
+      "paper_id": "2CxkRDMIG4",
+      "paper_sha256": "fcba2ed64fccf7669d54fd2901ba48cffe0f98ce89adedc8a1d4d74e36c8f885",
+      "normalized_characters": 36387,
+      "review_run_id": "review_52d738262490430d9743d16941b0026e",
+      "run_status": "completed",
+      "gate_status": "pass",
+      "events": 67,
+      "requests": 10,
+      "request_failures": 0,
+      "input_tokens": 114184,
+      "output_tokens": 9617,
+      "total_tokens": 123801,
+      "model_latency_ms": 642342.736,
+      "assessments": 5,
+      "deterministic_invalid_assessments": 5,
+      "candidate_findings_before_verifier": 4,
+      "initial_statuses": {
+        "reporting_gap": 3,
+        "plausible_risk": 1,
+        "not_applicable": 1
+      },
+      "final_statuses": {
+        "reporting_gap": 3,
+        "plausible_risk": 1,
+        "not_applicable": 1
+      },
+      "verifier_verdicts": {
+        "accept": 5
+      }
+    },
+    {
+      "paper_id": "UyNXMqnN3c",
+      "paper_sha256": "e629443bafc74d2546ebca475927890ae1a2e2fed6f72609c83b3a1772ce8151",
+      "normalized_characters": 54502,
+      "review_run_id": "review_a89f69e439d045c0bd3cded90fb7bebc",
+      "run_status": "completed",
+      "gate_status": "pass",
+      "events": 71,
+      "requests": 11,
+      "request_failures": 0,
+      "input_tokens": 195333,
+      "output_tokens": 13477,
+      "total_tokens": 208810,
+      "model_latency_ms": 282749.45,
+      "assessments": 6,
+      "deterministic_invalid_assessments": 5,
+      "candidate_findings_before_verifier": 6,
+      "initial_statuses": {
+        "reporting_gap": 5,
+        "plausible_risk": 1
+      },
+      "final_statuses": {
+        "reporting_gap": 5,
+        "plausible_risk": 1
+      },
+      "verifier_verdicts": {
+        "accept": 6
+      }
+    }
+  ],
+  "per_skill_aggregate": {
+    "baseline-fairness-audit": {
+      "requests": 4,
+      "input_tokens": 58654,
+      "output_tokens": 5038,
+      "model_latency_ms": 108209.64,
+      "candidate_findings_before_verifier": 2
+    },
+    "control-ablation-audit": {
+      "requests": 4,
+      "input_tokens": 57676,
+      "output_tokens": 3574,
+      "model_latency_ms": 457920.966,
+      "candidate_findings_before_verifier": 1
+    },
+    "data-leakage-audit": {
+      "requests": 4,
+      "input_tokens": 58212,
+      "output_tokens": 3507,
+      "model_latency_ms": 78570.699,
+      "candidate_findings_before_verifier": 2
+    },
+    "metric-alignment-audit": {
+      "requests": 5,
+      "input_tokens": 76580,
+      "output_tokens": 6912,
+      "model_latency_ms": 201870.699,
+      "candidate_findings_before_verifier": 3
+    },
+    "sampling-split-audit": {
+      "requests": 4,
+      "input_tokens": 58395,
+      "output_tokens": 4063,
+      "model_latency_ms": 78520.182,
+      "candidate_findings_before_verifier": 2
+    }
+  },
+  "comparison_same_two_papers": {
+    "deepseek": {
+      "input_tokens": 295755,
+      "output_tokens": 12523,
+      "total_tokens": 308278,
+      "model_latency_ms": 109470.848,
+      "assessments": 11,
+      "deterministic_invalid_assessments": 4,
+      "candidate_findings_before_verifier": 3,
+      "final_statuses": {
+        "insufficient_evidence": 10,
+        "not_applicable": 1
+      },
+      "verifier_verdicts": {
+        "accept": 6,
+        "downgrade": 2,
+        "reject": 3
+      }
+    },
+    "luna": {
+      "input_tokens": 309517,
+      "output_tokens": 23094,
+      "total_tokens": 332611,
+      "model_latency_ms": 925092.185,
+      "assessments": 11,
+      "deterministic_invalid_assessments": 10,
+      "candidate_findings_before_verifier": 10,
+      "final_statuses": {
+        "reporting_gap": 8,
+        "plausible_risk": 2,
+        "not_applicable": 1
+      },
+      "verifier_verdicts": {
+        "accept": 11
+      }
+    }
+  },
+  "privacy_validation": {
+    "forbidden_exact_keys": [
+      "prompt",
+      "content",
+      "quote",
+      "manuscript"
+    ],
+    "forbidden_keys_found": [],
+    "api_key_persisted": false
+  }
+}
