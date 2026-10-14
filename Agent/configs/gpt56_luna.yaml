@@ -1,0 +1,28 @@
+schema_version: "agent-config-0.1"
+provider:
+  name: "openai-compatible-gpt56-luna"
+  base_url: "https://sub.wenhengpuyuan.com/v1"
+  model: "gpt-5.6-luna"
+  api_key_env: "OPENAI_API_KEY"
+  temperature: 0
+  max_output_tokens: 4096
+  max_retries: 2
+input:
+  allowed_extensions: [".mmd"]
+  max_characters: 160000
+execution:
+  condition: "progressive"
+  output_language: "en"
+  invoke_all_mechanisms: true
+  verifier_enabled: true
+  retry_backoff_seconds: 1.0
+  max_model_requests_per_run: 15
+paths:
+  rubric: "rubrics/r3_profile.yaml"
+  system_prompt: "prompts/system.md"
+  orchestrator_prompt: "prompts/orchestrator.md"
+  verifier_prompt: "prompts/verifier.md"
+  skills: "skills"
+  private_runs: "runs/private"
+  source_registry: "provenance/source_registry.yaml"
+  traceability_edges: "provenance/traceability_edges.jsonl"

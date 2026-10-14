@@ -1,15 +1,15 @@
 {
   "schema_version": "artifact-manifest-0.1",
-  "generated_at_utc": "2026-10-12T12:36:00.049537+00:00",
+  "generated_at_utc": "2026-10-14T14:56:19.460490+00:00",
   "hash_algorithm": "sha256",
-  "artifact_count": 69,
-  "root_digest": "9565bb4137400f51edda91fc11858ed4b44abf4380695212f5ff6e942ef5503f",
+  "artifact_count": 70,
+  "root_digest": "e939d5dc32a8b18a0476c093dda18e8a4522b6f1b24d75bc690d3ee691eb826e",
   "artifacts": [
     {
       "path": "CHANGELOG.md",
       "category": "package",
-      "sha256": "b73f6fef523396fd2076ee777f99589d4322c14f13e027e123e80b6b043761d9",
-      "bytes": 707
+      "sha256": "94547491a0d602709ae6046e218c5466daf037eb9eea21be9981542fed37bf79",
+      "bytes": 834
     },
     {
       "path": "README.md",
@@ -46,6 +46,12 @@
       "category": "configs",
       "sha256": "1bfc815e25747d00b654736f8aeec269ab3739c0dbfe4bcb44d813c0c9fbbffe",
       "bytes": 797
+    },
+    {
+      "path": "configs/gpt56_luna.yaml",
+      "category": "configs",
+      "sha256": "c4a8f53a29b11c5db862d9a1a7d3558ac8a478195adbb165b243c94dc5ce9fb5",
+      "bytes": 822
     },
     {
       "path": "docs/evidence_detector_spec.md",

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added a frozen OpenAI-compatible `gpt-5.6-luna` configuration for the
+  three-paper model-replication pilot.
+
 ## 0.1.0 - 2026-10-12
 
 - Added source-first R3 methodology registry and rule traceability.
